@@ -1,0 +1,44 @@
+.section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    z-index: 999
+}
+
+.message {
+    background: #09091a;
+    color: #f4f4f4;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.14),0 20px 90px 0 rgba(0,0,0,.4);
+    border-radius: 2px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: San Francisco,-apple-system,BlinkMacSystemFont,\.SFNSText-Regular,sans-serif
+}
+
+.message ion-icon {
+    z-index: 10;
+    font-size: 25px
+}
+
+.message .body,.message .body .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+@media (max-width: 780px) {
+    .section {
+        max-width:100vw
+    }
+}

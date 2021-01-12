@@ -1,0 +1,51 @@
+.title {
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+.title.active {
+    background: var(--lightBlueWhite);
+    border: 1px solid var(--textColor)
+}
+
+.title .titleText {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--linkColor)
+}
+
+.area {
+    border-left: 1px solid var(--textColor);
+    border-right: 1px solid var(--textColor);
+    border-bottom: 1px solid var(--textColor);
+    margin-bottom: 5px
+}
+
+.area .values .item {
+    display: inline-block;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background: var(--inputBackground)
+}
+
+.area .values .itemP {
+    display: flex;
+    align-items: center
+}
+
+.area .center {
+    display: flex;
+    justify-content: center
+}
+
+.afterReturn {
+    display: flex;
+    justify-content: space-evenly
+}

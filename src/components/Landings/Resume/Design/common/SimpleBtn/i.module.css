@@ -1,0 +1,24 @@
+.w {
+    --gradient:linear-gradient(90deg,#e87990,#d43e70,#8c1e62,#682054,#471f42,#221a2c);
+    --gradientQ:linear-gradient(90deg,#608dff,#ad3ce8);
+    --colorDarkBlue:#09091a;
+    --colorLightBlue:#2c6ef1;
+    --colorHanPurple:#8f5df2;
+    position: relative;
+    border-radius: 30px;
+    padding: 10px 25px 14px;
+    margin: 10px 20px;
+    cursor: pointer;
+    background: var(--gradientQ);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: "Montserrat",Arial,sans-serif;
+    color: #fff
+}

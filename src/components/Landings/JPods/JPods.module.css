@@ -1,0 +1,239 @@
+.Container{
+    position: relative;
+    grid-area: c;
+    overflow-x: hidden;
+    --height_container: calc(var(--adaptiveHeight) - 40px)
+}
+
+/*  Фрагмент1  */
+.c_preview{
+    width: 100%;
+    height: var(--height_container);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    /*animation:*/
+}  .block{
+       display: inline-block;
+       width: 50%;
+   }
+
+
+.page{
+    width: 100%;
+    height: var(--height_container);
+
+    overflow: hidden;
+}
+
+
+.hand_pods{
+    height: var(--height_container);
+    width: 100vw;
+    object-fit: cover;
+    object-position: -200px 50%;
+}
+
+.android_ok{
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+}
+.android_ok img{
+    width: 200px;
+    object-position: 30px 50%;
+    -webkit-animation: hello .5s ease-in;
+    animation: hello .5s ease-in;
+}
+@-webkit-keyframes hello {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes hello {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.decoration{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.load_app_btn{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    top: 10px;
+    left: 10px;
+    /*right: 10px;*/
+    z-index: 11;
+    color: #737373;
+    background: transparent;
+    -webkit-animation: open .5s ease-in;
+    animation: open .5s ease-in;
+}
+.load_app_btn:hover{
+    color: #09091a;
+}
+@-webkit-keyframes open {
+    from{
+        transform: rotateX(-90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+@keyframes open {
+    from{
+        transform: rotateX(-90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+.android2{
+    position: absolute;
+    transform: translateX(225px) translateY(225px) rotateZ(35deg);
+}
+.text2{
+    position:absolute;
+    transform: translateX(450px) translateY(100px);
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+}
+.jinn{
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform: translateY(-30px)
+}
+
+
+
+
+@media (max-width: 780px){
+    .c_preview{
+        height: calc(var(--height_container) + 600px);
+    }  .block{
+           display: block;
+           width: 100%;
+           box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+       }
+    .block.phone_b{
+        height: 600px;
+    }
+    .hand_pods{
+        object-position: 50% 80%;
+        transform: translateY(4px);
+    }
+
+
+    .android_ok{
+        bottom: -8px;
+    }
+
+    .page{
+        --heightSlider: 600px;
+        height: var(--heightSlider); }
+    .selling_c{
+        height: var(--heightSlider); }
+    .selling_slider{
+        height: var(--heightSlider); }
+    .c_item{
+        height: var(--heightSlider); }
+    .sell_item{
+        height: var(--height_SellItem);
+
+        margin: 0 50px;}
+
+
+    .m_pab.c_preview{
+        height: calc(700px + var(--heightJinn));
+    }
+    .m_pab .block{
+        height: 700px;
+    }
+    .m_pab .block.jinn_div{
+        --heightJinn: calc(var(--height_container) - var(--heightGBottom));
+        height: var(--heightJinn);
+    }
+    .jinn{
+        height: calc(var(--height_container) - var(--heightGBottom));
+        transform: translateY(20px);
+        display:flex;
+        justify-content:center;
+        align-items:flex-end;
+    }
+
+
+    .android2{
+        transform: translateX(55%) translateY(225px) rotateZ(35deg);
+    }
+    .text2{
+        transform: translateX(0%) translateY(600px);
+    }
+    /*.sell_item {*/
+    /*  margin: 10px;*/
+    /*}*/
+}
+.phone_demo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+.wrapper{
+    position: relative;
+    width: 380px;
+    left: 40px;
+    height: var(--height_container);
+    -webkit-animation: hello .5s ease-in;
+    animation: hello .5s ease-in;
+}
+.phone{
+    position: absolute;
+    width: 380px;
+    height: 600px; }
+.demo_div{
+    position: absolute;
+    /*  .phone сама картинка має такі відступи  */
+    top: 35px;
+    left: 100px;
+
+    width: 250px;
+    height: var(--height_phone_content);
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    --height_phone_content: 520px; }
+.demo_video{
+    height: calc(var(--height_phone_content) - 4px) !important;
+    width: auto!important;
+    /*transform: translateY(-8px);*/
+}
+
+@media (max-width: 780px) {
+    .phone_demo{
+        padding: 30px 0;
+        top: -20px;
+        width: 100vw;
+    }
+    .wrapper{
+        position: relative;
+        width: 380px;
+        left: -40px;
+        height: var(--height_container);
+    }
+}

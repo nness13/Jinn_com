@@ -1,0 +1,52 @@
+.w {
+    --widthCase:200px;--heigthCase:200px;position: relative;
+    width: 100%;
+    min-height: var(--heigthCase);
+    transform: scale(1);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media (min-width: 780px) {
+    .w:hover {
+        transform:scale(1.02)
+    }
+}
+
+@media (max-width: 780px) {
+    .w {
+        --widthCase:100vw!important
+    }
+}
+
+.w>div {
+    width: inherit
+}
+
+.w img {
+    width: inherit;
+    object-fit: fill
+}
+
+.caseTitle {
+    bottom: 0;
+    right: 0;
+    border-bottom-left-radius: 10px
+}
+
+.caseTitle,.caseTitleVideo {
+    position: absolute;
+    padding: 10px 15px;
+    font-size: 17px;
+    background: var(--gradient);
+    color: #fff;
+    cursor: pointer
+}
+
+.caseTitleVideo {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 10px
+}

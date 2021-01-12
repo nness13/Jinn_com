@@ -1,0 +1,11 @@
+.dataPanel {
+    min-height: 100px;
+    padding: 10px
+}
+
+@media (max-width: 780px) {
+    .dataPanel {
+        padding:0 10px;
+        overflow: scroll
+    }
+}

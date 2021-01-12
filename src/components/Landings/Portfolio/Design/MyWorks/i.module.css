@@ -1,0 +1,39 @@
+.w {
+    --portfolioDesignWidth:100vw;--portfolioDesignHeight:calc(100vh - 40px);--colorDarkBlue:#09091a;--colorTopPurple:#8f5df2;position: relative;
+    width: var(--portfolioDesignWidth);
+    height: var(--portfolioDesignHeight);
+    padding: 80px var(--leftRightPadding) 25px var(--leftRightPadding);
+    box-shadow: 0 -5px 10px hsla(0,0%,100%,.1),0 -5px 10px hsla(0,0%,100%,.1);
+    z-index: 1;
+    overflow: auto;
+    background: #101010
+}
+
+.t_preset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    color: #fff
+}
+
+.line {
+    width: 80px;
+    height: 2px;
+    background: #404040
+}
+
+.btn {
+    margin: 15px 20px 12px
+}
+
+@media (max-width: 780px) {
+    .w {
+        padding:0 var(--leftRightPadding) 25px var(--leftRightPadding)
+    }
+
+    .btn {
+        margin: 15px 0 12px
+    }
+}

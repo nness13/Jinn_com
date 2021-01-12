@@ -1,0 +1,74 @@
+.w {
+    position: absolute;
+    transform: translateY(-430px) translateX(130px)
+}
+
+.b {
+    box-shadow: 0 0 110px 150px #8f5df2;
+    -webkit-animation: roadBeacon 15s linear infinite;
+    animation: roadBeacon 15s linear infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+@media (max-width: 780px) {
+    .w {
+        transform:translateY(-370px) translateX(130px)
+    }
+}
+
+@-webkit-keyframes roadBeacon {
+    0% {
+        opacity: 1;
+        transform: translateX(0)translateY(0)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(-190px)translateY(-20px)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateX(-110px)translateY(170px)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)translateY(0)rotate(0deg)scale(1)
+    }
+}
+
+@keyframes roadBeacon {
+    0% {
+        opacity: 1;
+        transform: translateX(0)translateY(0)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(-190px)translateY(-20px)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateX(-110px)translateY(170px)rotate(0deg)scale(1);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)translateY(0)rotate(0deg)scale(1)
+    }
+}

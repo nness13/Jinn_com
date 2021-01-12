@@ -1,0 +1,49 @@
+.w {
+    position: absolute;
+    transform: translateX(-150px);
+    z-index: 1
+}
+
+.block {
+    width: 240px;
+    padding: 10px 0 10px 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    white-space: pre-wrap;
+    border-radius: 300px;
+    background-color: #fff;
+    background-position: 50%;
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 0 0 40px 0 rgba(29,111,235,.4);
+    cursor: pointer;
+    color: #737373;
+    font-size: 18px;
+    font-family: "Montserrat",Arial,sans-serif
+}
+
+.block img {
+    border-radius: 50%;
+    width: 55px
+}
+
+.t {
+    font-size: 25px;
+    font-weight: 700;
+    color: #282c34
+}
+
+.block>ion-icon {
+    color: #2c6ef1;
+    font-size: 30px!important
+}
+
+@media (max-width: 780px) {
+    .w {
+        transform:translateX(0)
+    }
+}

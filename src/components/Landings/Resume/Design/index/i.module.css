@@ -1,0 +1,16 @@
+.w {
+    position: relative;
+    grid-area: c;
+    overflow-x: hidden;
+    --leftRightPadding:10vw;
+    --portfolioDesignWidth:80vw;
+    --height_container:calc(var(--adaptiveHeight) - 40px);
+    --gradient:linear-gradient(90deg,#608dff,#ad3ce8)
+}
+
+@media (max-width: 780px) {
+    .w {
+        --portfolioDesignWidth:80vw;
+        --leftRightPadding:5vw
+    }
+}

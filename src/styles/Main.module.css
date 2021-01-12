@@ -1,0 +1,103 @@
+.btn{
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 3px;
+
+    border-radius: 2px;
+    border: 3px solid var(--mainBlueSolid);
+    color: var(--textColor);
+    background: var(--mainBlueSolid);
+    transition: all .5s;
+
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    margin: 0 5px;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--mainBlueSolid);
+}
+
+.easyBtn{
+    padding: 5px;
+    font-size: 16px;
+    color: var(--textColor)
+}
+.whiteBtn{
+    width: 300px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    gap: 20px;
+    justify-content: center;
+
+    background: white;
+    border: 1px solid var(--textColor);
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 16px 5px;
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+.whiteBtn:hover {
+    border: 2px solid var(--mainBlueLight);
+}
+
+.gradientText{
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    -webkit-background-clip: text;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+.evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.rowToColumn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@media (max-width: 780px) {
+    .rowToColumn{
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+}

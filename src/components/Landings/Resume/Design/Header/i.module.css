@@ -1,0 +1,47 @@
+.w {
+    --portfolioDesignWidth:calc(100vw - var(--leftRightPadding)*2);
+    --portfolioDesignHeaderHeight:65px;
+    --colorDarkBlue:#09091a;
+    position: fixed;
+    width: var(--portfolioDesignWidth);
+    height: var(--portfolioDesignHeaderHeight);
+    margin: 15px var(--leftRightPadding);
+    /*background: #fff;*/
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #303030
+}
+
+.w>div {
+    width: 100%;
+    color: #fff
+}
+
+.t {
+    font-family: "Montserrat",Arial,sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 7px;
+    --gradientQ:linear-gradient(90deg,#608dff,#ad3ce8);
+    background: var(--gradientQ);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.m {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+
+.m_i {
+    padding: 5px 10px;
+    margin: 5px 10px;
+    cursor: pointer
+}

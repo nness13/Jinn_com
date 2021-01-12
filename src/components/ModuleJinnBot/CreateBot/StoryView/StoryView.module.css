@@ -1,0 +1,63 @@
+.container {
+    border-top: 1px solid var(--textColor);
+    padding: 10px
+}
+
+.createLine {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    cursor: move;
+    overflow-x: auto
+}
+
+.createLine svg {
+    -webkit-animation: viewDiv .8s;
+    animation: viewDiv .8s
+}
+
+.wrapVariableBlock {
+    padding: 10px 25px 10px 0
+}
+
+@-webkit-keyframes viewDiv {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes viewDiv {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.title {
+    font-size: 25px!important;
+    font-family: system-ui;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center
+}
+
+.input,.input div,.input input {
+    background: transparent!important;
+    font-size: 25px;
+    font-family: system-ui;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto!important;
+    padding: 0!important;
+    margin: 0!important
+}

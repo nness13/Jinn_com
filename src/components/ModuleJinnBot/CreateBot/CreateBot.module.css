@@ -1,0 +1,7 @@
+.Container {
+    position: relative;
+    grid-area: c;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--lightBlueWhite)
+}

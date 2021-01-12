@@ -1,0 +1,253 @@
+.nextContainer {
+    width: 100%;
+    height: 100px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.nextContainer .Shadow .next {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 2px solid silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-animation: nextScaleOpen 1s;
+    animation: nextScaleOpen 1s;
+    cursor: pointer
+}
+
+.nextContainer .Shadow {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: nextScaleOpen .5s;
+    animation: nextScaleOpen .5s
+}
+
+.nextContainer[action=active] .Shadow .next {
+    -webkit-animation: nextScaleForShadow 10s;
+    animation: nextScaleForShadow 10s
+}
+
+.nextContainer[action=active] .Shadow {
+    -webkit-animation: nextScale 10s;
+    animation: nextScale 10s
+}
+
+.nextContainer .Shadow .next .Arrow {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid silver;
+    border-right: 2px solid silver;
+    transform: rotate(45deg) translateX(-5px) translateY(-5px);
+    -webkit-animation: nextArrowAnim .8s linear infinite alternate;
+    animation: nextArrowAnim .8s linear infinite alternate
+}
+
+.nextContainer[action=active] .Shadow .next .Arrow {
+    -webkit-animation: nextArrowOpen 10s;
+    animation: nextArrowOpen 10s
+}
+
+@media (max-width: 780px) {
+    .nextContainer {
+        padding-top:0
+    }
+}
+
+@-webkit-keyframes nextScale {
+    0% {
+        width: 80px;
+        height: 80px
+    }
+
+    5% {
+        width: 80px;
+        height: 80px
+    }
+
+    8% {
+        width: 0;
+        height: 0;
+        border: 2px solid #d3d3d3
+    }
+
+    9% {
+        border: 0 solid #d3d3d3
+    }
+
+    to {
+        width: 0;
+        height: 0
+    }
+}
+
+@keyframes nextScale {
+    0% {
+        width: 80px;
+        height: 80px
+    }
+
+    5% {
+        width: 80px;
+        height: 80px
+    }
+
+    8% {
+        width: 0;
+        height: 0;
+        border: 2px solid #d3d3d3
+    }
+
+    9% {
+        border: 0 solid #d3d3d3
+    }
+
+    to {
+        width: 0;
+        height: 0
+    }
+}
+
+@-webkit-keyframes nextScaleForShadow {
+    0% {
+        width: 80px;
+        height: 80px
+    }
+
+    5% {
+        width: 80px;
+        height: 80px
+    }
+
+    8% {
+        width: 0;
+        height: 0;
+        border: 1px solid #d3d3d3
+    }
+
+    9% {
+        border: 0 solid #d3d3d3
+    }
+
+    to {
+        width: 0;
+        height: 0
+    }
+}
+
+@keyframes nextScaleForShadow {
+    0% {
+        width: 80px;
+        height: 80px
+    }
+
+    5% {
+        width: 80px;
+        height: 80px
+    }
+
+    8% {
+        width: 0;
+        height: 0;
+        border: 1px solid #d3d3d3
+    }
+
+    9% {
+        border: 0 solid #d3d3d3
+    }
+
+    to {
+        width: 0;
+        height: 0
+    }
+}
+
+@-webkit-keyframes nextScaleOpen {
+    0% {
+        width: 10px;
+        height: 10px
+    }
+
+    to {
+        width: 80px;
+        height: 80px
+    }
+}
+
+@keyframes nextScaleOpen {
+    0% {
+        width: 10px;
+        height: 10px
+    }
+
+    to {
+        width: 80px;
+        height: 80px
+    }
+}
+
+@-webkit-keyframes nextArrowAnim {
+    0% {
+        transform: rotate(45deg) translateX(-5px) translateY(-5px)
+    }
+
+    to {
+        transform: rotate(45deg) translateX(0) translateY(0)
+    }
+}
+
+@keyframes nextArrowAnim {
+    0% {
+        transform: rotate(45deg) translateX(-5px) translateY(-5px)
+    }
+
+    to {
+        transform: rotate(45deg) translateX(0) translateY(0)
+    }
+}
+
+@-webkit-keyframes nextArrowOpen {
+    0% {
+        transform: rotate(45deg) translateX(-5px) translateY(-5px);
+        opacity: 1
+    }
+
+    10% {
+        transform: rotate(45deg) translateX(15px) translateY(15px);
+        opacity: 0
+    }
+
+    to {
+        transform: rotate(45deg) translateX(15px) translateY(15px);
+        opacity: 0
+    }
+}
+
+@keyframes nextArrowOpen {
+    0% {
+        transform: rotate(45deg) translateX(-5px) translateY(-5px);
+        opacity: 1
+    }
+
+    10% {
+        transform: rotate(45deg) translateX(15px) translateY(15px);
+        opacity: 0
+    }
+
+    to {
+        transform: rotate(45deg) translateX(15px) translateY(15px);
+        opacity: 0
+    }
+}

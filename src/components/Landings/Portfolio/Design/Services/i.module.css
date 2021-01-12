@@ -1,0 +1,52 @@
+.w {
+    --portfolioDesignWidth:100vw;--portfolioDesignHeight:350px;position: relative;
+    width: var(--portfolioDesignWidth);
+    padding: 0 var(--leftRightPadding) 50px var(--leftRightPadding);
+    background: #303030
+}
+
+.t_preset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 10px;
+    gap: 10px;
+    color: #fff
+}
+
+.line {
+    width: 80px;
+    height: 2px;
+    background: #404040
+}
+
+.box {
+    background: #202020;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.box>.about {
+    display: flex;
+    justify-content: flex-end
+}
+
+.box>* {
+    height: 100%
+}
+
+.box h2 {
+    margin-top: 0
+}
+
+.about>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}

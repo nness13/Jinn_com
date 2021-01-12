@@ -1,0 +1,11 @@
+.containerCenterDiv {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.loginDiv {
+    width: 300px;
+    height: 500px
+}

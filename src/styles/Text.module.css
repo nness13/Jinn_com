@@ -1,0 +1,7 @@
+.line {
+    border-left: 4px solid #000;
+    background: #f4f4f4;
+    padding: 5px;
+    display: flex;
+    flex-direction: row
+}

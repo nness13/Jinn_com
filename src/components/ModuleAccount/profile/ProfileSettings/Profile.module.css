@@ -1,0 +1,23 @@
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.title {
+    width: 95%;
+    padding: 15px 0
+}
+
+.top button {
+    background: none;
+    border: none
+}
+
+.inputTitle {
+    width: 100px
+}
+
+.divInput,.divInput input {
+    width: 100%
+}

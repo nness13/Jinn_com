@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.wrapper {
+    grid-area: c;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex
+}
+
+.frame,.wrapper {
+    background: #f8f8f8;
+    justify-content: center;
+    align-items: center
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    color: #333;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.card {
+    background: #fff;
+    height: 85%;
+    width: 88%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px hsla(0,0%,50.2%,.4);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out
+}
+
+.card:first-child {
+    margin-left: 1rem
+}
+
+.card:nth-child(3) {
+    margin-right: 1rem
+}
+
+.card>* {
+    transition: all .3s ease-in-out
+}
+
+.card:active,.card:focus,.card:hover {
+    transform: scale(1.04)
+}
+
+.card:active .cardTop,.card:focus .cardTop,.card:hover .cardTop {
+    background: #957303
+}
+
+.card:active .cardValue,.card:focus .cardValue,.card:hover .cardValue {
+    color: #957303
+}
+
+.cardTop {
+    height: 25%;
+    width: 100%;
+    background: #f9c105;
+    color: #fff;
+    font-weight: 600;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem
+}
+
+.cardInfo,.cardTop {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.cardInfo {
+    height: 75%;
+    overflow: hidden;
+    flex-direction: column
+}
+
+.cardInfo>* {
+    text-align: center
+}
+
+.cardCost {
+    margin-bottom: 1rem
+}
+
+.cardValue {
+    font-weight: 700;
+    font-size: 1.6rem
+}
+
+.cardMonth {
+    font-size: .8rem
+}
+
+.bars {
+    height: 85%;
+    width: 95%;
+    background: #fff;
+    box-shadow: 3px 3px 5px hsla(0,0%,50.2%,.2);
+    overflow: scroll;
+    grid-column: 1/-1;
+    justify-self: center
+}
+
+.stat {
+    padding: .8rem .5rem
+}
+
+.statInfo {
+    font-size: .8rem;
+    margin-bottom: .2rem;
+    display: flex;
+    justify-content: space-between
+}
+
+.statInfo div:first-child {
+    margin-right: 50px
+}
+
+.statBar {
+    height: 12px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: .5rem
+}
+
+.statBar>span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #f9c105;
+    border-radius: .5rem;
+    transition: all .3s
+}
+
+@media (max-width: 780px) {
+    .frame {
+        width:100vw;
+        height: 600px;
+        font-size: 11px
+    }
+
+    .bars {
+        height: 100%
+    }
+}

@@ -1,0 +1,80 @@
+.checkbox {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0
+}
+
+.switch {
+    --scale-switch:4;
+    --background-color:#bec7d5;
+    --item-color:#fff;
+    --check-background-color:var(--mainBlueLight);
+    --check-item-color:#fff;
+    position: relative;
+    width: var(--label-width);
+    height: var(--label-height);
+    background: var(--background-color);
+    border-radius: var(--label-width);
+    display: block;
+    cursor: pointer;
+    --label-width:calc(10px*var(--scale-switch));--label-height:calc(5px*var(--scale-switch))}
+
+@-webkit-keyframes loading {
+    0% {
+        transform: translateX(100%)
+    }
+
+    50% {
+        transform: translateX(-10%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(100%)
+    }
+
+    50% {
+        transform: translateX(-10%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.switch:after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: calc(var(--label-width)*0.4);
+    height: calc(var(--label-height)*0.75);
+    background: var(--item-color);
+    border-radius: 90px;
+    transition: .3s
+}
+
+.loading.switch:after {
+    -webkit-animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite
+}
+
+.checkbox:checked+.switch {
+    background: var(--check-background-color)
+}
+
+.checkbox:checked+.switch:after {
+    left: 90%;
+    transform: translateX(-100%);
+    background: var(--check-item-color)
+}
+
+.switch:active:after {
+    width: calc(var(--label-width)*0.8)
+}

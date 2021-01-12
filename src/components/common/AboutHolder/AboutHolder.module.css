@@ -1,0 +1,12 @@
+.placeholder:hover:after {
+    content: attr(message);
+    position: absolute;
+    width: 350px;
+    border: 1px solid var(--textColor);
+    background: #fff;
+    color: var(--linkColor);
+    font-weight: 300!important;
+    padding: 10px;
+    z-index: 200;
+    white-space: pre-wrap
+}
