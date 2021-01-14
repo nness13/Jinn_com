@@ -24,11 +24,20 @@ let reducers = combineReducers({
     modal: modalReducer,
 });
 
+type RootReducerType = typeof rootReducer; // (globalstate: AppStateType) => AppStateType
+export type AppStateType = ReturnType<RootReducerType>
+
+export type InferActionsTypes<T> = T extends { [keys: string]: (...args: any[]) => infer U } ? U : never
+
+export type BaseThunkType<A extends Action = Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
+
+// @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
     trace: true,
     traceLimit: 25
 }) : compose;
 
+// @ts-ignore
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 // const store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
