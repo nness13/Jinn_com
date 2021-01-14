@@ -1,5 +1,5 @@
-import {applyMiddleware, combineReducers, compose, createStore} from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import {Action, applyMiddleware, combineReducers, compose, createStore} from 'redux';
+import thunkMiddleware, {ThunkAction} from 'redux-thunk';
 import {reducer as formReducer} from 'redux-form';
 import appReducer from './reducers/appReducer';
 import contextMenuReducer from '../components/common/contextMenu/contextMenuReducer';
@@ -9,8 +9,9 @@ import authReducer from '../components/ModuleAccount/authReducer';
 import alertReducer from '../components/common/Alert/alertReducer';
 import modalReducer from '../components/common/Modal/modalReducer';
 import dashboardReducer from '../components/ModuleJinnBot/ChatsDashboard/dashboardReducer';
+import chatReducer from './reducers/chat-reducer';
 
-let reducers = combineReducers({
+let rootReducer = combineReducers({
     app: appReducer,
     form: formReducer,
 
@@ -22,6 +23,8 @@ let reducers = combineReducers({
     contextMenu: contextMenuReducer,
     alert: alertReducer,
     modal: modalReducer,
+
+    chat: chatReducer
 });
 
 type RootReducerType = typeof rootReducer; // (globalstate: AppStateType) => AppStateType

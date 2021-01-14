@@ -1,11 +1,7 @@
-import {ResultCodeForCapcthaEnum, ResultCodesEnum} from '../api/api'
-import {stopSubmit} from 'redux-form'
-import {authAPI} from '../api/auth-api'
-import {securityAPI} from '../api/security-api'
-import {BaseThunkType, InferActionsTypes} from './redux-store'
+import {BaseThunkType, InferActionsTypes} from '../store'
 import {Action, Dispatch} from 'redux'
 import {FormAction} from 'redux-form/lib/actions'
-import {chatAPI, ChatMessageAPIType, StatusType} from '../api/chat-api'
+import {chatAPI, ChatMessageAPIType, StatusType} from '../../api/chat-api'
 import {v1} from 'uuid'
 
 type ChatMessageType = ChatMessageAPIType & {id: string}
