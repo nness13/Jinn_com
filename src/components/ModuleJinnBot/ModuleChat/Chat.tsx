@@ -9,13 +9,18 @@ import {AppStateType} from '../../../redux/store'
 
 
 const ChatModule: React.FC = () => {
-    return ReactDOM.createPortal(
+    return <section>
+        <Chat/>
+    </section>
+    /*return ReactDOM.createPortal(
         <section>
             <Chat/>
         </section>,
         document.querySelector('#root') as Element
-    )
+    )*/
 }
+
+export default ChatModule
 
 const Chat: React.FC = () => {
     const dispatch = useDispatch()
