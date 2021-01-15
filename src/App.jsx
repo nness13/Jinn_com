@@ -23,6 +23,9 @@ const Page = React.lazy(() => import('./components/Landings/Price/Price'));
 const ResumeDesign = React.lazy(() => import('./components/Landings/Resume/Design/index/i'));
 const PortfolioDesign = React.lazy(() => import('./components/Landings/Portfolio/Design/index/i'));
 
+const Chat = React.lazy(() => import('./components/ModuleJinnBot/ModuleChat/Chat'));
+
+
 function Main() {
     return <BrowserRouter>
         <Provider store={store}>
@@ -55,6 +58,8 @@ function App() {
             {/*<Route exact path="/j:id" render={() => <React.Suspense fallback={<Preloader/>}><ChatPage/></React.Suspense>}/>*/}
             <Route exact path="/airpods" render={() => <React.Suspense fallback={<Preloader/>}><JPods/></React.Suspense>}/>
             <Route exact path="/price" render={() => <React.Suspense fallback={<Preloader/>}><Page/></React.Suspense>}/>
+
+            <Route exact path="/chat" render={() => <React.Suspense fallback={<Preloader/>}><Chat/></React.Suspense>}/>
 
             {/*<Route exact path="/andriy" render={() => <React.Suspense fallback={<Preloader/>}><Portfolio/></React.Suspense>}/>*/}
             <Route exact path="/nness" render={() => <React.Suspense fallback={<Preloader/>}><ResumeDesign/></React.Suspense>}/>
